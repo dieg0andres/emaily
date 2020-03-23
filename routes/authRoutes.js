@@ -7,15 +7,17 @@ module.exports = function(app) {
     passport.authenticate('google', { scope: ['profile', 'email'] }));
 
   app.get('/auth/google/callback',
-    passport.authenticate('google'));
+    passport.authenticate('google'),
+    function(req, res) {
+      res.redirect('/surveys');
+    })
 
   app.get('/api/logout', function(req, res) {
     req.logout();
-    res.send(req.user);
+    res.redirect('/');
   })
 
   app.get('/api/current_user', function(req, res) {
     res.send(req.user)
   })
-
 };
