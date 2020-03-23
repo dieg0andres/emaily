@@ -9,7 +9,7 @@ class Header extends Component {
 
     switch(this.props.auth) {
       case null:
-        return;
+        return null;
       case false:
         return (
           <li><a href="/auth/google">Sign in with Google</a></li>
