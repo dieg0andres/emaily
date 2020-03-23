@@ -29,7 +29,7 @@ passport.use(new GoogleStrategy({
 
     if (existingUser) {
       // we already have a record w/ given googleID
-      console.log('user already exists, verified with Google Strategy', existingUser)
+      // console.log('user already exists, verified with Google Strategy', existingUser)
       return done(null, existingUser);
 
     }
