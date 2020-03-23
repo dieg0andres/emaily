@@ -6,8 +6,8 @@ import * as actions from '../actions';
 class Payments extends Component {
   render() {
       return (
-        // child element to handle the styling
-        <StripeCheckout // returns a button
+
+        <StripeCheckout 
           name ="Emaily"
           description="$5 for 5 email credits"
           amount = {500}
