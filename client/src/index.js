@@ -8,6 +8,9 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';
 
+// import axios from 'axios';
+// window.axios = axios;
+
 // first input: all the reducers
 // second input: initial application state
 // third input: call of middleware
