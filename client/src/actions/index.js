@@ -35,3 +35,13 @@ export function handleToken(token) {
     dispatch( {type: FETCH_USER, payload: res.data} )
   }
 }
+
+export function submitSurvey(values, history) {
+  return async function(dispatch) {
+    const res = await axios.post('/api/surveys', values);
+
+    history.push('/surveys')
+
+    dispatch( {type: FETCH_USER, payload: res.data} )
+  }
+}

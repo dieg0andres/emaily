@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
+import { reducer as reduxForm } from 'redux-form';
 import authReducer from './authReducer';
 
 export default combineReducers({
   // auth is a state property
-  auth: authReducer
+  auth: authReducer,
+  // redux Form reducer requires this to be called form
+  form: reduxForm
 });

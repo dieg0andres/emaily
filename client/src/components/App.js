@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from "./Header";
-import Landing from "./Landing"
+import Landing from "./Landing";
+import Dashboard from "./Dashboard";
 import { connect } from 'react-redux';
+import SurveyNew from './surveys/SurveyNew';
 import * as actions from '../actions';  // this looks at the actions/index.js file
 
-
-const Dashboard = () => <h2>Dashboard</h2>
-const SurveyNew = () => <h2>SurveyNew</h2>
 
 class App extends Component {
 
   componentDidMount() {
     this.props.fetchUser();
   }
+
+// className = "container"
+// used by materialize css ... it adds margin / padding on left/right side of page
 
   render() {
     return (
